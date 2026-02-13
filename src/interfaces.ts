@@ -22,8 +22,9 @@ interface VisibilityState {
 
 interface VisibilityStateListener {
   on(event: string, listener: Listener): void;
-  start(): boolean; // TODO: add (continue? = false) parameter
+  start(): boolean;
   pause(): boolean;
+  destroy(): void;
   hasError(): boolean;
   getError(): string | null;
   getState(): string;
